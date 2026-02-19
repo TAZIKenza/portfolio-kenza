@@ -25,3 +25,17 @@ export const projects = [
         link: "#"
     }
 ];
+export const skills = [
+  {
+    category: "AI & Data Science",
+    items: ["Python (Pandas, NumPy)", "Scikit-Learn", "Machine Learning", "Deep Learning", "SQL / NoSQL"]
+  },
+  {
+    category: "Développement Web",
+    items: ["React.js", "Node.js", "Tailwind CSS", "Vite", "JavaScript (ES6+)"]
+  },
+  {
+    category: "Outils & DevOps",
+    items: ["Git / GitHub", "Docker", "Jupyter Notebook", "Tableau / PowerBI", "Agile"]
+  }
+];
