@@ -1,52 +1,42 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+import React from 'react';
+import Navbar from './components/Navbar';
+import { bio } from './data.js';
 
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800">
-      <div className="p-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl">
-        <h1 className="text-4xl font-bold text-ai_blue mb-2">
-          Kenza TAZI
-        </h1>
-        <p className="text-slate-300">Portfolio Ingénierie AI & DATA en construction...</p>
-        <div className="mt-4 px-4 py-2 bg-ai_blue/20 text-ai_blue rounded-full inline-block text-sm font-mono">
-          Status: Ready for deployment
-        </div>
-      </div>
+    <div className="min-h-screen bg-slate-900 text-slate-100">
+      <Navbar />
+      
+      <main className="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        <section id="home" className="space-y-6">
+          <div className="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
+            Disponible pour stage / PFE
+          </div>
+          
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
+            {bio.name}
+          </h1>
+          
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-400">
+            {bio.title}
+          </h2>
+          
+          <p className="max-w-2xl text-lg text-slate-400 leading-relaxed">
+            {bio.description}
+          </p>
+          
+          <div className="flex gap-4 pt-4">
+            <button className="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-all">
+              Voir mes projets
+            </button>
+            <button className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all">
+              Mon CV (PDF)
+            </button>
+          </div>
+        </section>
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
